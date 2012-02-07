@@ -1,0 +1,55 @@
+fai 'default_attack.fai'
+
+def mod_aggression(ai*,leader_threat,uses_leader)
+    # aggression has different values if leader is used or leader is threatened #
+    if( uses_leader, leader_aggression,
+        if ( leader_threat, 1.0, aggression )
+    );
+
+def best_attack(ai*)
+
+    choose( 
+      filter(attacks, (defense_on(unit_at(movements[0].src), movements[0].dst) >= 50
+         or
+           ( 
+             calculate_outcome(movements[0].src,movements[0].dst,target)[1].hitpoints_left[0] = 0 and
+             calculate_outcome(movements[0].src,movements[0].dst,target)[1].probability[0] >= 5000
+           )) and (uses_leader=0 or my_side.gold<=20)
+           and 
+debug_float(target,
+not ( vulnerability > 50.0 and vulnerability > support*2.0 and chance_to_kill < 2 
+           )
+)
+      ),
+
+debug_float(loc(target.x+1,target.y),
+
+  (
+       # Base value: #
+       target_value/1000. * chance_to_kill/100.
+
+       # Modified by expected losses #
+       - avg_losses/1000. * (1.0 - mod_aggression(ai,leader_threat,uses_leader))
+
++ ((target_starting_damage/3. + avg_damage_inflicted) 
+   - (1.0-mod_aggression(ai,leader_threat,uses_leader))*avg_damage_taken)/10.0
+
+
+# only on good terrain #
+
+  ) 
+  / (resources_used / 2.)
+  * if(leader_threat, 5., 1.)
+
+)
+    );
+
+    if( next_attack,
+
+      attack( next_attack[0].movements[0].src, next_attack[0].movements[0].dst, next_attack[0].target ),
+      []
+    )
+
+    where next_attack = [best_attack(self)]
+
+faiend

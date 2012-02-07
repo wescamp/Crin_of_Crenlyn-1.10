@@ -1,0 +1,13 @@
+border_size=1
+usage=map
+
+Hh          , Hh^Fp       , Hh^Fp       , Hh          , Hh          , Hh          , Hh          , Hh          , Hh          , Hh          , Hh          , Hh          , Hh          , Ww          , Hh          , Hh          
+Hh^Fp       , Hh          , Hh^Fp       , Hh          , Mm          , Hh          , Mm          , Hh          , Hh^Fmf      , Hh^Fp       , Hh^Fmf      , Hh          , Hh          , Ww          , Hh^Fdf      , Hh^Fmf      
+Mm          , Hh          , Mm          , Mm          , Mm          , Mm          , Mm          , Mm          , Hh          , Hh^Fp       , Hh          , Hh^Fmf      , Hh^Fmf      , Ww          , Ww          , Hh          
+Mm          , Mm          , Mm          , Mm          , Hh^Fp       , Mm          , Mm          , Hh          , Chr         , Chr         , Chr         , Hh          , Hh          , Hh          , Ww          , Hh          
+Hh          , Mm          , Mm          , Mm          , Mm          , Mm          , Mm          , Khr         , Rr          , Rr          , Rr          , Chr         , Hh          , Hh^Fmf      , Ww          , Hh          
+Hh^Fp       , Hh^Fp       , Hh^Fp       , Mm          , Hh          , Mm          , Mm          , Khr         , Chr         , Rr          , Chr         , Chr         , Hh          , Hh^Fdf      , Hh          , Ww          
+Hh^Fp       , Hh^Fp       , Mm          , Hh          , Mm          , Mm          , Mm          , Mm          , Mm          , Chr         , Hh          , Hh          , Hh          , Hh          , Hh          , Hh          
+Mm          , Hh^Fp       , Mm          , Mm          , Mm          , Mm          , Mm          , Mm          , Mm          , Chr         , Hh          , Hh          , Hh          , Hh^Fmf      , Hh^Fdf      , Hh          
+Mm          , Mm          , Mm          , Mm          , Hh          , Hh^Fp       , Hh^Fdf      , Hh          , Hh          , Mm          , Hh          , Hh^Fp       , Hh^Fmf      , Hh^Fmw      , Hh          , Hh          
+Hh          , Hh          , Hh          , Hh          , Hh          , Hh          , Hh          , Hh^Fmf      , Gg          , Hh          , Hh^Fdf      , Hh          , Hh          , Hh          , Hh          , Hh          

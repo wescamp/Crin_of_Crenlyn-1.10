@@ -1,0 +1,6 @@
+fai 'default_attack_eval.fai'
+# run_file('~add-ons/tests/ai_tests/default_attack_eval.fai') #
+
+# Base score is 101,000 #
+{AI_CA_COMBAT_SCORE} + 1000
+faiend
